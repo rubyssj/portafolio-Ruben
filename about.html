@@ -422,11 +422,29 @@
                 /* Mengurangi ukuran teks statistik */
             }
 
-            /* Menyesuaikan padding untuk link statistik */
+            /* Relleno ajustado para enlaces de estadísticas. */
             .stat-item a {
                 padding: 0.5rem;
                 display: block;
             }
+            .show-more {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.show-more-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.show-more-button:hover {
+    background-color: #0056b3;
+}
         }
     </style>
     <title>About - Portfolio Website</title>
@@ -434,107 +452,88 @@
 
 <body>
 
-    <!-- Navigasi -->
+    <!-- Navegación -->
     <nav>
         <div class="nav-container">
             <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
-                Mhd.Sailijar <span>Dirya</span>
+                Dev. Ruben <span>ROA</span>
             </div>
             <div class="links">
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a
-                        href="index.html">Home</a></div>
+                        href="index.html">Inicio</div>
                 <div class="link active" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a
-                        href="about.html">About</a></div>
+                        href="about.html">Sobre mi</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a
                         href="skill.html">Skills</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a
-                        href="service.html">Service</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a
-                        href="contact.html">Contact</a></div>
+                        href="contact.html">Contacto</a></div>
             </div>
         </div>
         <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
         <div class="dropdown">
             <div class="links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
+                <a href="index.html">Inicio/a>
+                <a href="about.html">Sobre mi</a>
                 <a href="skill.html">Skills</a>
-                <a href="service.html">Service</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.html">Contacto</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
         </div>
     </nav>
 
-    <!-- Konten utama halaman About -->
+    <!-- El contenido principal de la página Acerca de-->
     <div class="about-container">
         <div class="about-content" id="aboutContent">
             <!-- Bagian header -->
             <div class="about-header" data-aos="fade-down" data-aos-duration="1500">
-                <h1>About Me</h1>
+                <h1>Sobre Mí</h1>
             </div>
 
-            <!-- Grid untuk gambar dan teks deskripsi -->
+            <!-- Cuadrícula para imágenes y texto de descripción. -->
             <div class="about-grid">
                 <div class="about-image" data-aos="fade-right" data-aos-duration="1500">
-                    <img src="img/zoro.jpg" alt="About Image">
+                    <img src="img/aaa23.png" alt="About Image">
                 </div>
                 <div class="about-text" data-aos="fade-left" data-aos-duration="1500">
-                    <h2>Who Am I?</h2>
-                    <p>I am an IT person with several years of experience in frontend development, 
-                        ui/ux, database, data analysis. Experienced in achievement or responsibility.
-                        Have technical skills such as python programming language, html, css, javascript,
-                        and in the field of ui/ux design through the figma website</p>
+                    <h2>¿Quién soy yo?</h2>
+                    <p>Soy un Desarrollador web con mucha pasión hacia la tecnologia y el futbol, tambien
+                        estudiante de Ingeniera en informática. Me encanta innovar y arreglar cosas con distintas herramientas
+                    </p>
                     
 
                     <div class="stats">
                         <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="200"
                             onclick="showProjects()">
-                            <h3>50+</h3>
-                            <p>Projects Completed</p>
-                        </div>
-                        <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400"
-                            onclick="showExperience()">
-                            <h3>3+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600"
-                            onclick="showClients()">
-                            <h3>20+</h3>
-                            <p>Happy Clients</p>
-                        </div>
-                        <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="800"
-                            onclick="showAwards()">
                             <h3>15+</h3>
-                            <p>Awards Won</p>
+                            <p>Proyectos completados</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Link ke library animasi AOS -->
+        <!-- Enlace a la biblioteca de animaciones AOS -->
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-        <!-- JavaScript untuk interaksi dan animasi halaman -->
+        <!--JavaScript para interacciones y animaciones de páginas. -->
         <script>
 
-            // Inisialisasi library AOS
+            // Inicializar bibliotecas AOS
             AOS.init({ offset: 0 });
 
-            // Fungsi untuk menampilkan menu hamburger
+            // Función para mostrar el menú de hamburguesas.
             function hamburg() {
                 const navbar = document.querySelector(".dropdown")
                 navbar.style.transform = "translateY(0px)"
             }
 
-            // Fungsi untuk menyembunyikan menu hamburger
+            // Función para ocultar el menú de hamburguesas
             function cancel() {
                 const navbar = document.querySelector(".dropdown")
                 navbar.style.transform = "translateY(-500px)"
             }
 
-            // Fungsi untuk menampilkan daftar Project
+            // Función para mostrar la lista de proyectos.
             function showProjects() {
                 const aboutContent = document.getElementById('aboutContent');
                 aboutContent.innerHTML = `
@@ -542,88 +541,54 @@
                     <i class="fas fa-arrow-left"></i> Back
                 </a>
                 <div class="about-header" data-aos="fade-down" data-aos-duration="1500">
-                    <h1>My Projects</h1>
+                    <h1>Mis Proyectos</h1>
                 </div>
                 <div class="content-grid">
                     ${generateProjectCards()}
+                   
                 </div>
+                <div class="show-more">
+            <a href="https://github.com/rubyssj" target="_blank" class="show-more-button">
+                Mostrar más proyectos
+            </a>
+        </div>
             `;
                 AOS.refresh();
             }
 
-            // Fungsi untuk menampilkan daftar Experience
-            function showExperience() {
-                const aboutContent = document.getElementById('aboutContent');
-                aboutContent.innerHTML = `
-                <a href="about.html" class="back-button" onclick="restoreInitialContent()">
-                    <i class="fas fa-arrow-left"></i> Back
-                </a>
-                <div class="about-header" data-aos="fade-down" data-aos-duration="1500">
-                    <h1>My Experience</h1>
-                </div>
-                <div class="content-grid">
-                    ${generateExperienceCards()}
-                </div>
-            `;
-                AOS.refresh();
-            }
+           
+          
 
-            // Fungsi untuk menampilkan daftar Clients
-            function showClients() {
-                const aboutContent = document.getElementById('aboutContent');
-                aboutContent.innerHTML = `
-                <a href="about.html" class="back-button" onclick="restoreInitialContent()">
-                    <i class="fas fa-arrow-left"></i> Back
-                </a>
-                <div class="about-header" data-aos="fade-down" data-aos-duration="1500">
-                    <h1>Client Success Stories</h1>
-                </div>
-                <div class="content-grid">
-                    ${generateClientCards()}
-                </div>
-            `;
-                AOS.refresh();
-            }
+            
+           
 
-            // Fungsi untuk menampilkan daftar Awards
-            function showAwards() {
-                const aboutContent = document.getElementById('aboutContent');
-                aboutContent.innerHTML = `
-                <a href="about.html" class="back-button" onclick="restoreInitialContent()">
-                    <i class="fas fa-arrow-left"></i> Back
-                </a>
-                <div class="about-header" data-aos="fade-down" data-aos-duration="1500">
-                    <h1>Awards & Recognition</h1>
-                </div>
-                <div class="content-grid">
-                    ${generateAwardCards()}
-                </div>
-            `;
-                AOS.refresh();
-            }
-
-            // Fungsi pembantu untuk menghasilkan kartu project
+            // Función auxiliar para generar tarjetas de proyecto.
             function generateProjectCards() {
                 const projects = [
                     {
-                        title: "E-Commerce Platform",
-                        image: "img/zoro.jpg",
-                        description: "A full-stack e-commerce solution with payment integration",
-                        technologies: ["React", "Node.js", "MongoDB"]
+                        title: "Tienda de Ropa",
+                        image: "img/python ropa.jpg",
+                        description: "Programa realizado en python donde simula una tienda de ropa dinamica, utilizamos python unicamente.",
+                        technologies: ["python"]
                     },
                     {
-                        title: "Portfolio Website",
-                        image: "img/zoro.jpg",
-                        description: "Responsive portfolio website with modern animations",
+                        title: "Catalogo de Peliculas ",
+                        image: "img/JAV2.jpg",
+                        description: "proyecto realizado con JavaScript, html, css y el API  de un sitio web de peliculas conocida. ",
                         technologies: ["HTML", "CSS", "JavaScript"]
                     },
                     {
-                        title: "Task Management App",
-                        image: "img/zoro.jpg",
-                        description: "Mobile-first task management application",
-                        technologies: ["Vue.js", "Firebase"]
+                        title: "Gestor de Tareas",
+                        image: "img/vue.jpeg",
+                        description: "Es una gestion de tareas multiuso, ver eliminar y agregar tareas con modelo de una API de Tareas.",
+                        technologies: ["Vue.js", "HTML", "JavaScript" ]
+                    },
+                    {
+                        title: "Django login",
+                        image: "img/django.png",
+                        description: "sistema de registro de usuarios para utilizar la aplicacion de agregar y gestionar tareas ",
+                        technologies: ["Django", "Supabase", "html", "CSS"]
                     }
-                    // Add more projects as needed
                 ];
 
                 return projects.map(project => `
@@ -644,37 +609,8 @@
             `).join('');
             }
 
-            // Fungsi pembantu untuk menghasilkan kartu experience
-            function generateExperienceCards() {
-                const experiences = [
-                    {
-                        title: "Senior Web Developer",
-                        company: "Tech Solutions Inc.",
-                        period: "2021 - Present",
-                        description: "Leading frontend development team and implementing modern web solutions"
-                    },
-                    {
-                        title: "Frontend Developer",
-                        company: "Digital Agency",
-                        period: "2019 - 2021",
-                        description: "Developed responsive websites and web applications"
-                    }
-                    // Add more experiences as needed
-                ];
-
-                return experiences.map(exp => `
-                <div class="content-card" data-aos="fade-up">
-                    <div class="card-info">
-                        <h3>${exp.title}</h3>
-                        <h4>${exp.company}</h4>
-                        <p class="period">${exp.period}</p>
-                        <p>${exp.description}</p>
-                    </div>
-                </div>
-            `).join('');
-            }
-
-            // Fungsi pembantu untuk menghasilkan kartu client
+           
+            // Función auxiliar para generar tarjetas de clientes.t
             function generateClientCards() {
                 const clients = [
                     {
@@ -691,52 +627,12 @@
                     }
                     // Add more clients as needed
                 ];
-
-                return clients.map(client => `
-                <div class="content-card" data-aos="fade-up">
-                    <div class="card-image">
-                        <img src="${client.image}" alt="${client.name}">
-                    </div>
-                    <div class="card-info">
-                        <h3>${client.name}</h3>
-                        <h4>${client.company}</h4>
-                        <p class="client-testimonial">"${client.testimonial}"</p>
-                    </div>
-                </div>
-            `).join('');
             }
+    
 
-            // Fungsi pembantu untuk menghasilkan kartu award
-            function generateAwardCards() {
-                const awards = [
-                    {
-                        title: "Best Web Design",
-                        organization: "Design Awards 2023",
-                        description: "Recognition for exceptional web design and user experience"
-                    },
-                    {
-                        title: "Innovation Award",
-                        organization: "Tech Summit 2022",
-                        description: "Awarded for innovative use of emerging technologies"
-                    }
-                    // Add more awards as needed
-                ];
+                
 
-                return awards.map(award => `
-                <div class="content-card" data-aos="fade-up">
-                    <div class="card-info">
-                        <div class="award-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <h3>${award.title}</h3>
-                        <h4>${award.organization}</h4>
-                        <p>${award.description}</p>
-                    </div>
-                </div>
-            `).join('');
-            }
-
-            // Fungsi untuk mengembalikan konten awal
+            // Función para devolver contenido inicial.
             function restoreInitialContent() {
                 const aboutContent = document.getElementById('aboutContent');
                 aboutContent.innerHTML = `
@@ -745,7 +641,7 @@
                 </div>
                 <div class="about-grid">
                     <div class="about-image" data-aos="fade-right" data-aos-duration="1500">
-                        <img src="img/zoro.jpg" alt="About Image">
+                        <img src="img/aaa23.png" alt="About Image">
                     </div>
                     <div class="about-text" data-aos="fade-left" data-aos-duration="1500">
                         <h2>Who Am I?</h2>

@@ -6,7 +6,7 @@ $data = json_decode(file_get_contents('php://input'), true);
 
 // Validasi input
 if (!isset($data['name']) || !isset($data['email']) || !isset($data['subject']) || !isset($data['message'])) {
-    echo json_encode(['success' => false, 'message' => 'Semua field harus diisi']);
+    echo json_encode(['success' => false, 'message' => 'Todos los campos deben ser completados.']);
     exit;
 }
 
@@ -18,27 +18,27 @@ $message = filter_var($data['message'], FILTER_SANITIZE_STRING);
 
 // Validasi email
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo json_encode(['success' => false, 'message' => 'Email tidak valid']);
+    echo json_encode(['success' => false, 'message' => 'Correo electrónico no válido']);
     exit;
 }
 
-// Email tujuan (ganti dengan email Anda)
-$to = "tamzidan01@gmail.com"; // Ganti dengan email Anda
+// cORREO ELECTRONICO DE RECIBO
+$to = "rubenroa973299@gmail.com"; // 
 
-// Persiapkan pesan email
+// Preparar un mensaje de correo electrónico
 $email_content = "Nama: $name\n";
 $email_content .= "Email: $email\n";
 $email_content .= "Pesan:\n$message";
 
-// Header email
+// Correo electrónico de encabezado
 $headers = "From: $email\r\n";
 $headers .= "Reply-To: $email\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 
-// Kirim email
+// enviar un correo electrónico
 if (mail($to, $subject, $email_content, $headers)) {
     echo json_encode(['success' => true]);
 } else {
-    echo json_encode(['success' => false, 'message' => 'Gagal mengirim email']);
+    echo json_encode(['success' => false, 'message' => 'No se pudo enviar el correo electrónico']);
 }
 ?>
